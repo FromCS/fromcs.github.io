@@ -1,0 +1,13 @@
+{
+  "name": "template",
+  "license": "BSD 3-Clause",
+  "private": true,
+  "devDependencies": {
+    "@atls/actl-cli": "^0.4.48",
+    "husky": "7.0.1",
+    "typescript": "4.3.5"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}
