@@ -1,6 +1,7 @@
 const app = require ('fastify') ({
   logger:true
 })
+app.register(require('fastify-cors'))
 
 app.get('/', async (request, response) => ({hello: 'world'}) )
 app.listen(3000, (err, address) => {

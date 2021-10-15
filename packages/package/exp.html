@@ -1,17 +1,18 @@
 <html>
+
 <body>
-    <h1>response</h1>
-    <script type="text/javascript"> {
-        async function getAPI() {
-          let response = fetch ('http://localhost:3000').
-          then(successResponse => {
-            if (successResponse.status != 200) {
-              return null
-            }  else {
-              return successResponse.json()
-            }
-        })
-    }}
+    <div ID="res"></div>
+    <script type="text/javascript">
+      let elem = document.getElementById('res')
+
+      async function Response() {
+        const response = await fetch('http://localhost:3000')
+        return await response.text()
+      }
+
+      Response().then(data => elem.innerText = data)
+
     </script>
 </body>
+
 </html>
