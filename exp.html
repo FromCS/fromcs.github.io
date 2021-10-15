@@ -1,0 +1,17 @@
+<html>
+<body>
+    <h1>response</h1>
+    <script type="text/javascript"> {
+        let response = fetch ('http://localhost:3000/').
+          then(successResponse => {
+            if (successResponse.status != 200) {
+              return null
+
+            }  else {
+              return successResponse.json()
+            }
+        })
+    }
+    </script>
+</body>
+</html>
